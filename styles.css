@@ -1,0 +1,582 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Garamond, Helvetica, sans-serif;
+}
+
+h1,
+h2 {
+    font-family: "Arial Black", Garamond, Helvetica, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* CONTAINER */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* BOTÕES */
+.btn-contact {
+    display: inline-block;
+    margin-top: 20px;
+    background: #31752a;
+    color: white;
+    padding: 12px 25px;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.btn-contact:hover {
+    background: #255d20;
+}
+
+.btn-back {
+    display: inline-block;
+    margin-top: 25px;
+    background: white;
+    color: #31752a;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-back:hover {
+    background: #f0f0f0;
+}
+
+/* ============================================================================================================================= */
+/* ============================================================================================================================= */
+
+/* ===============================================
+   BARRA DE NAVEGAÇÃO NO TOPO - PÁGINA PRINCIPAL
+================================================== */
+.header {
+    position: relative;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* BARRA DE NAVEGAÇÃO AO MEIO */
+.logo {
+    justify-self: center;
+}
+
+.logo img {
+    height: 110px;
+}
+
+
+/* ============================================================================================================================= */
+/* ============================================================================================================================= */
+
+/* ===========================
+   RODAPÉ - TODAS AS PÁGINAS
+============================== */
+.site-footer {
+    background: #31752a;
+    color: #fff;
+    padding-top: 70px;
+}
+
+/* CONTAINER PRINCIPAL */
+.footer-container {
+    max-width: 900px;
+    margin: auto;
+    padding: 0 30px 40px;
+    display: flex;
+    justify-content: center;
+    gap: 180px;
+}
+
+/* COLUNAS */
+.footer-col {
+    width: 30%;
+}
+
+.footer-col h3 {
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.footer-col h4 {
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+    font-weight: 500;
+    opacity: 0.8;
+    color: rgba(255, 255, 255, 0.718);
+}
+
+.footer-col p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col li {
+    margin-bottom: 10px;
+}
+
+.footer-col a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer-col a:hover {
+    opacity: 0.7;
+}
+
+.footer-socials li {
+    margin-bottom: 10px;
+}
+
+/* PARTE DE BAIXO */
+.footer-bottom {
+    text-align: center;
+    padding: 10px 0;
+    background: #31752a;
+    color: white;
+    font-size: 1rem;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    .footer-container {
+        width: 100%;
+        border-right: none;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+    }
+}
+
+
+/* ============================================================================================================================= */
+/* ============================================================================================================================= */
+
+/* =========================
+   HERO - PÁGINA PRINCIPAL
+============================ */
+.hero {
+    height: 85vh;
+    position: relative;
+    overflow: hidden;
+}
+
+/* SLIDES */
+.hero-slide {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+/* SLIDE ATIVO */
+.hero-slide.active {
+    opacity: 1;
+}
+
+/* OVERLAY ESCURO */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(35, 34, 34, 0.5);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+
+/* ============================================================================================================================= */
+/* ============================================================================================================================= */
+
+/* =============================
+   SOBRE NÓS - PÁGINA PRINCIPAL
+================================ */
+.about-home {
+    padding: 100px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* caixa principal */
+.about-box {
+    display: flex;
+    max-width: 1000px;
+    width: 100%;
+    background: #31752a;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* imagem */
+.about-img {
+    width: 40%;
+}
+
+.about-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* texto */
+.about-text {
+    width: 60%;
+    padding: 40px;
+}
+
+.about-text h2 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    color: white;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+
+/* ============================================================================================================================= */
+/* ============================================================================================================================= */
+
+/* ============================
+   SERVIÇOS - PÁGINA PRINCIPAL
+=============================== */
+.home-services {
+    padding: 80px 20px;
+    background: white;
+    text-align: center;
+}
+
+.home-services h2 {
+    font-size: 32px;
+    margin-bottom: 50px;
+    color: #31752a;
+}
+
+/* GRID DAS COLUNAS */
+.services-preview {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 0 auto 40px;
+}
+
+/* CADA COLUNA */
+.services-column {
+    flex: 1;
+}
+
+.services-column h3 {
+    margin-bottom: 20px;
+    color: #31752a;
+}
+
+/* CAIXAS DOS SERVIÇOS */
+.service-box {
+    background: white;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border-left: 5px solid #31752a;
+    text-align: left;
+    font-weight: 500;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+/* HOVER */
+.service-box:hover {
+    background: #31752a;
+    color: white;
+    transform: translateX(5px);
+}
+
+/* BOTÃO */
+.btn-services-main {
+    display: inline-block;
+    background: #31752a;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+.btn-services-main:hover {
+    background: #255d20;
+}
+
+
+/* ============================================================================================================================= */
+/* ============================================================================================================================= */
+
+/* =================
+   HERO - SERVIÇOS
+==================== */
+.services-hero {
+    height: 85vh;
+    background: url("assets/hero2.jpg") center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+/* overlay escuro */
+.services-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    pointer-events: none; /* garantir que o overlay não bloqueia a interação com o botão */
+}
+
+.services-hero > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* garantir que o texto fica visível */
+.services-hero h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    position: relative; /* garantir que o texto fica visível por conta do overlay */
+    z-index: 1; /* garantir que o texto fica visível por conta do overlay */
+}
+
+.services-hero p {
+    font-size: 22px;
+    margin-bottom: 20px;
+    position: relative; /* garantir que o texto fica visível por conta do overlay */
+    z-index: 1; /* garantir que o texto fica visível por conta do overlay */
+}
+
+/* SECÇÕES */
+.services-page {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.services-page h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #31752a;
+}
+
+/* GRID */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+/* CARD */
+.service-card {
+    background: white;
+    padding: 30px 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.service-card i {
+    font-size: 35px;
+    color: #31752a;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    font-size: 16px;
+    color: #31752a;
+}
+
+/* HOVER */
+.service-card:hover {
+    transform: translateY(-8px);
+    background: #31752a;
+}
+
+.service-card:hover i,
+.service-card:hover p {
+    color: white;
+}
+
+
+/* ================
+   CTA - SERVIÇOS
+=================== */
+.services-cta {
+    text-align: center;
+    padding: 60px 30px;
+    margin-top: 60px;
+    background: white;
+    color: #31752a;
+}
+
+.services-cta h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.services-cta p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+/* BOTÃO */
+.btn-contact {
+    display: inline-block;
+    margin-top: 20px;
+    background: #31752a;
+    color: white;
+    padding: 14px 35px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+/* HOVER */
+.btn-contact:hover {
+    background: #255d20;
+}
+
+
+/* ====================
+   PÁGINA DE CONTACTO
+======================= */
+.contact-page {
+    min-height: 100vh;
+    padding: 80px 20px;
+    background: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-container {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.contact-container h1 {
+    color: #31752a;
+    margin-bottom: 15px;
+}
+
+.contact-container p {
+    margin-bottom: 30px;
+    color: #555;
+}
+
+#whatsappForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#whatsappForm select {
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    background: white;
+    cursor: pointer;
+}
+
+#whatsappForm input,
+#whatsappForm textarea {
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+#whatsappForm button {
+    background: #31752a;
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#whatsappForm button:hover {
+    background: #255d20;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido de Orçamento - Sementes e Costumes</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <section class="contact-page">
+        <div class="contact-container">
+
+            <h1>Solicitar Orçamento</h1>
+            <p>Preencha os dados abaixo e envie-nos uma mensagem diretamente por WhatsApp.</p>
+
+            <form id="whatsappForm">
+
+                <input type="text" id="nome" placeholder="Nome" required>
+                <select id="servico" required>
+                    <option value="">Selecione um serviço</option>
+
+                    <optgroup label="Serviços com Maquinaria">
+
+                        <option>Tratamento foliar</option>
+                        <option>Herbicida</option>
+                        <option>Trituradora</option>
+                        <option>Destroçadora de correntes</option>
+                        <option>Grade de disco pesada</option>
+                        <option>Distribuição de adubo</option>
+                        <option>Mini giratória</option>
+                        <option>Fresa</option>
+
+                    </optgroup>
+
+                    <optgroup label="Serviços Gerais">
+
+                        <option>Poda de Olival / Amendoal</option>
+                        <option>Manutenção de rega</option>
+                        <option>Plantação e apanha de fruta</option>
+                        <option>Poda Baixeira</option>
+                        <option>Poda com motosserra</option>
+                        <option>Limpeza e manutenção de terrenos</option>
+                        <option>Colheita de Olival</option>
+                        <option>Colheita de Amendoal</option>
+                        <option>Serviços roçadora</option>
+                        <option>Plantação olival</option>
+
+                    </optgroup>
+
+                </select>
+
+                <textarea id="mensagem" rows="5" placeholder="Descreva o que pretende"></textarea>
+
+                <button type="submit">Enviar por WhatsApp</button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
